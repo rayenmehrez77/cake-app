@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import CustomButton from '../CustomButton/CustomButton'
+import CustomButton from '../CustomButton/CustomButton'; 
+import bannerImg from "../../images/cake-banner.png"; 
 
 const Banner = () => {
     return (
@@ -11,7 +12,7 @@ const Banner = () => {
                 <CustomButton to="/explore">Explore Menu</CustomButton>
             </div>
             <div className="banner__right">
-                {/* <img src={img} alt="cake image"/>  */}
+                <img src={bannerImg} alt="cake image"/> 
             </div>
         </BannerWrapper>
     )
@@ -23,9 +24,13 @@ export default Banner
 const BannerWrapper = styled.div`
     height: 80vh; 
     padding: 4rem 0; 
-    background-color: var(--bg-primary); 
+    background-color: var(--bg-primary);  
+    display: flex; 
+    justify-content: space-between;
+    padding-right: 5rem;
+    align-items: center;
+
     .banner__left{
-        width: 30rem; 
         padding: 8rem 13rem; 
 
         h1 {
@@ -35,7 +40,7 @@ const BannerWrapper = styled.div`
         }
 
         p {
-            margin-bottom: 3rem; 
+            margin: 2rem 0 3rem; 
             font-family: "DM Sans", sans-serif; 
             font-weight: 500; 
             font-size: 1.2rem; 
@@ -46,8 +51,11 @@ const BannerWrapper = styled.div`
             padding: 1rem 1.8rem; 
             font-size: 1.5rem; 
         }
+
     }
-    .banner__right{
-        
+    
+    .banner__right img {
+        width: 30rem; 
+        margin-right: 4rem; 
     }
 `

@@ -2,14 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaPhone } from "react-icons/fa"; 
-import CustomButton from '../CustomButton/CustomButton';
+import CustomButton from '../CustomButton/CustomButton'; 
+import { ReactComponent as Logo } from "../../images/jelly.svg"
 
 
 const Navbar = () => {
     return (
         <Wrapper> 
             <div className="navbar__left">
-                <Link to="/"> 
+                <Link to="/" className="logo__container"> 
+                    <Logo className="logo"></Logo>
                     <h1>Cake</h1>
                 </Link>
                 <ul>
@@ -46,6 +48,7 @@ export default Navbar
 
 
 const Wrapper = styled.nav`
+    z-index: 999; 
     height: 5rem; 
     width: 100%;  
     position: fixed; 
@@ -63,8 +66,8 @@ const Wrapper = styled.nav`
         align-items: center;  
         h1 {
             font-family: "Quicksand", sans-serif; 
-            font-weight: 400; 
-            color: var(--bg-button); 
+            font-weight: 600; 
+            color: var(--primary-color); 
         }
         a {
             text-decoration: none;
@@ -80,6 +83,18 @@ const Wrapper = styled.nav`
                 margin-right: 2rem; 
             }
         }
+
+        .logo__container {
+            display: flex; 
+            align-items: center;
+        }
+
+        .logo {
+            width: 2.5rem; 
+            height: 2.5rem; 
+            object-fit: contain; 
+            margin-right: 1rem;  
+        }
     }
     .navbar__right {
         display: flex; 
@@ -91,7 +106,7 @@ const Wrapper = styled.nav`
         } 
 
         p {
-            color: var(--bg-button); 
+            color: var(--primary-color); 
             font-weight: 600; 
             display: flex; 
             align-items: center;
@@ -102,6 +117,6 @@ const Wrapper = styled.nav`
 const NavLink = styled(Link)`
     font-family: "Quicksand", sans-serif; 
     font-weight: 500; 
-    color: var(--navLink-color); 
+    color: var(--tertiary-color); 
     font-size: 1.2rem;       
 `

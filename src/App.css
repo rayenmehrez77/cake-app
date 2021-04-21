@@ -1,7 +1,8 @@
 :root { 
 
   --bg-primary: #FFF7F3;
-  --bg-button: #E14106;
+  --primary-color: #E14106;
   --bg-button-hover: #9e2a00;
-  --navLink-color: #7c7b7b; 
+  --tertiary-color: #7c7b7b; 
+  --secondary-color: #FFF5F2;
 }
