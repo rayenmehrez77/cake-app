@@ -1,5 +1,5 @@
 import React from 'react'; 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import cake1 from "../../images/cake1.jpg"
 import cake2 from "../../images/cake2.jpg"
 import cake3 from "../../images/cake3.jpg"
@@ -9,13 +9,12 @@ import cake5 from "../../images/cake5.jpg"
 const Pictures = () => {
     return (
         <Wrapper>
-            <img src={cake2} alt="cake"/>
-            <img src={cake3} alt="cake"/>
-            <img src={cake4} alt="cake"/>
-            <img src={cake5} alt="cake"/> 
-
-            <div className="hover__img">
-                
+            <div className="images">
+                <img src={cake2} alt="cake"/>
+                <img src={cake3} alt="cake"/>
+                <img src={cake4} alt="cake"/>
+                <img src={cake5} alt="cake"/> 
+                <img src={cake5} alt="cake"/> 
             </div>
         </Wrapper>
     )
@@ -24,16 +23,25 @@ const Pictures = () => {
 export default Pictures
 
 
+
 const Wrapper = styled.div`
-    display: flex; 
-    margin-bottom: 5rem; 
     position: relative;
     
-    
-    img {
+    .images {
+        display: flex; 
+        overflow-x: scroll;
+    }
+
+    .images::-webkit-scrollbar {
+        display: none;
+    }
+
+    .images img {
+        cursor: pointer;
         width: 400px;
         height: 350px;
         object-fit: cover; 
+
     } 
     
     .hover__img {

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Banner, Features, PopularCake, Story} from '../../Components'
+import {Banner, Features, PopularCake, Story, Footer} from '../../Components'
 import Pictures from '../../Components/Pictures/Pictures'
 import Testimonials from '../../Components/Testimonials/Testimonials'
 

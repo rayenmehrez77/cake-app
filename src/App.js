@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router';
 import './App.css';
-import { Navbar } from './Components';
+import { Footer, Navbar } from './Components';
 import GlobalStyles from './GlobalStyles';
 import { AboutPage, BlogPage, ErrorPage, HomePage, ProductsPage } from "./Pages" 
 import ContactPage from './Pages/ContactPage/ContactPage';
@@ -18,6 +18,7 @@ function App() {
         <Route  path="/contact" component={ContactPage}/>  
         <Route  path="*" component={ErrorPage}/>  
       </Switch>
+      <Footer/> 
     </>
   );
 }

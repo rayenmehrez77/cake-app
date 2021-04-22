@@ -2,18 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaPhone } from "react-icons/fa"; 
-import CustomButton from '../CustomButton/CustomButton'; 
-import { ReactComponent as Logo } from "../../images/jelly.svg"
+import {CustomButton, Logo} from '../../Components'; 
 
 
 const Navbar = () => {
     return (
         <Wrapper> 
             <div className="navbar__left">
-                <Link to="/" className="logo__container"> 
-                    <Logo className="logo"></Logo>
-                    <h1>Cake</h1>
-                </Link>
+                <Logo /> 
                 <ul>
                     <li>
                         <NavLink to="/">Home</NavLink>
@@ -82,18 +78,6 @@ const Wrapper = styled.nav`
             li {
                 margin-right: 2rem; 
             }
-        }
-
-        .logo__container {
-            display: flex; 
-            align-items: center;
-        }
-
-        .logo {
-            width: 2.5rem; 
-            height: 2.5rem; 
-            object-fit: contain; 
-            margin-right: 1rem;  
         }
     }
     .navbar__right {

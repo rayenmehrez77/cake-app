@@ -9,6 +9,8 @@ import Features from "./Features/Features";
 import Feature from "./Feature/Feature"; 
 import Testimonials from "./Testimonials/Testimonials"; 
 import Testimonial from "./Testimonial/Testimonial"; 
+import Footer from "./Footer/Footer"; 
+import Logo from "./Logo/Logo"; 
 
 
-export { Navbar, Banner,Features, PopularCake, Story, Feature, TopLine, Product, CustomButton, Testimonials, Testimonial}; 
+export { Navbar, Banner,Features, PopularCake, Story, Feature, TopLine, Product, CustomButton, Testimonials, Testimonial, Footer, Logo}; 

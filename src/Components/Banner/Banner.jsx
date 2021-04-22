@@ -31,7 +31,7 @@ const BannerWrapper = styled.div`
     align-items: center;
 
     .banner__left{
-        padding: 8rem 13rem; 
+        padding: 8rem; 
 
         h1 {
             font-size: 4rem; 
@@ -56,6 +56,5 @@ const BannerWrapper = styled.div`
     
     .banner__right img {
         width: 30rem; 
-        margin-right: 4rem; 
     }
 `
