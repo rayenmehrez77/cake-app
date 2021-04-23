@@ -40,9 +40,10 @@ const Wrapper = styled.div`
     h1 {
         text-align: center; 
         padding: 6rem 0;
-        font-size: 3.5rem;        
+        font-size: 5rem;        
         font-family: "Lobster", sans-serif; 
         font-weight: 400;  
         letter-spacing: 3px; 
+        color: #1f1f1f; 
     }
 `
