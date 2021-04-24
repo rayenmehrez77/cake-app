@@ -13,6 +13,11 @@ import Footer from "./Footer/Footer";
 import Logo from "./Logo/Logo"; 
 import TopBanner from "./TopBanner/TopBanner"; 
 import Post from "./Post/Post"; 
+import Search from "./Search/Search"; 
+import AnimatedInput from "./AnimatedInput/AnimatedInput"; 
+import Category from "./Category/Category"; 
+import RecentPost from "./RecentPost/RecentPost"; 
+import NewPost from "./NewPost/NewPost"; 
 
 
-export { Navbar, Banner,Features, PopularCake, Story, Feature, TopLine, Product, CustomButton, Testimonials, Testimonial, Footer, Logo, TopBanner, Post}; 
+export { Navbar, Banner,Features, PopularCake, Story, Feature, TopLine, Product, CustomButton, Testimonials, Testimonial, Footer, Logo, TopBanner, Post, Search, AnimatedInput, Category, RecentPost, NewPost}; 

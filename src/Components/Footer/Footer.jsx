@@ -8,50 +8,54 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <Wrapper>
-            <div className="col1">
-                <Logo />
-                <p>Land behold it created good saw after she'd Our set living. Signs midst dominion creepeth morning laboris nisi ufsit aliquip.</p> 
-                <div className="social__media">
-                    <AiFillLinkedin /> 
-                    <AiFillFacebook /> 
-                    <AiFillInstagram /> 
-                    <AiFillTwitterCircle /> 
+            <div className="cols">
+                <div className="col1">
+                    <Logo />
+                    <p>Land behold it created good saw after she'd Our set living. Signs midst dominion creepeth morning laboris nisi ufsit aliquip.</p> 
+                    <div className="social__media">
+                        <AiFillLinkedin /> 
+                        <AiFillFacebook /> 
+                        <AiFillInstagram /> 
+                        <AiFillTwitterCircle /> 
+                    </div>
                 </div>
+                <div className="col2">
+                    <h2>Quick Links</h2> 
+                    <ul>
+                        <li>
+                            <NavLink to="/">Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/products">Products</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about">About</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/blog">Blog</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact">Contact</NavLink>
+                        </li>
+                    </ul>
+                </div>
+                <div className="col3">
+                    <h2>Cakes</h2> 
+                    <ul>
+                        <li>Blackforest</li>
+                        <li>Bodhubon</li>
+                        <li>ongdhonu</li>
+                        <li>Meghrong</li>
+                    </ul>
+                </div>
+                <div className="col4">
+                    <h2>Contact Us</h2> 
+                    <h4>Street Lorem ipsum 85</h4> 
+                    <span>+216 92 183 047</span>
+                </div>
+
             </div>
-            <div className="col2">
-                <h2>Quick Links</h2> 
-                <ul>
-                    <li>
-                        <NavLink to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/products">Products</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/about">About</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/blog">Blog</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/contact">Contact</NavLink>
-                    </li>
-                </ul>
-            </div>
-            <div className="col3">
-                <h2>Cakes</h2> 
-                <ul>
-                    <li>Blackforest</li>
-                    <li>Bodhubon</li>
-                    <li>ongdhonu</li>
-                    <li>Meghrong</li>
-                </ul>
-            </div>
-            <div className="col4">
-                <h2>Contact Us</h2> 
-                <h4>Street Lorem ipsum 85</h4> 
-                <span>+216 92 183 047</span>
-            </div>
+            <h5>Copyright ©2021 All rights reserved | Made with Love By <span>Rayen Mehrez</span></h5>
         </Wrapper>
     )
 }
@@ -60,15 +64,26 @@ export default Footer
 
 
 const Wrapper = styled.div`
-    margin: 0 auto; 
-    height: 60vh; 
     background-color: #FFF7F3; 
-    padding: 2rem 6rem;
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
-    grid-template-rows: repeat(auto-fill, 300px);  
-    justify-items: center; 
-    align-content: center; 
+    .cols {
+        margin: 0 auto; 
+        min-height: 40vh; 
+        padding: 4rem 6rem;
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
+        justify-items: center; 
+        align-content: center; 
+    }
+
+    h5 {
+        text-align: center;
+        padding-bottom: 1.5rem; 
+        color: var(--tertiary-color); 
+        span {
+            color: var(--primary-color); 
+            font-size: 1rem;  
+        }
+    }
 
     .col1 {
 
@@ -129,6 +144,7 @@ const Wrapper = styled.div`
         margin: 1rem 0;
         color: var(--tertiary-color);
     }
+
 
 
 `

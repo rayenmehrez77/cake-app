@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 
 
-export const AnimatedInput = ({placeholder: passedPlaceholder = "", ...passedProps}) => {
+const AnimatedInput = ({placeholder: passedPlaceholder = "", ...passedProps}) => {
     const [placeholder, setPlaceholder] = useState(passedPlaceholder.slice(0, 0));
     const [placeholderIndex, setPlaceholderIndex] = useState(0);
 
@@ -35,3 +35,4 @@ const Input = styled.input`
     width: 100%;  
 `
 
+export default AnimatedInput; 

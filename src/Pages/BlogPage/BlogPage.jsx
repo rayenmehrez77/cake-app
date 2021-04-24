@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { TopBanner, Post } from '../../Components';
-import { FaSearch } from "react-icons/fa"; 
-import { AnimatedInput } from '../../Components/AnimatedInput/AnimatedInput';
+import { TopBanner, Post, Search, Category, RecentPost} from '../../Components';
 
 const BlogPage = () => {
     return (
@@ -14,14 +12,9 @@ const BlogPage = () => {
                      <Post/> 
                  </div>
                  <div className="sidebar">
-                     <Search>
-                        <div className="input">
-                            <AnimatedInput placeholder="Search for Keyword"/>
-                            <div className="search-btn">
-                                <FaSearch className="search-button"/>   
-                            </div>
-                        </div>
-                     </Search>
+                     <Search />
+                     <Category /> 
+                     <RecentPost /> 
                  </div>
             </div>
         </Wrapper>
@@ -36,7 +29,7 @@ const Wrapper = styled.div`
 
     .blog-container {
         display: flex; 
-        margin: 6rem; 
+        margin: 7rem; 
     }  
 
     .posts {
@@ -48,25 +41,4 @@ const Wrapper = styled.div`
         margin-left: 2rem; 
     } 
 
-    .input {
-        width: 80%; 
-        padding: 3rem; 
-        display: flex; 
-        align-items: center; 
-        justify-content: space-between; 
-        
-        .search-btn {
-            cursor: pointer;
-            background-color: var(--primary-color); 
-            padding: 0.7rem 0.8rem; 
-            color: #fff;
-            border-top-right-radius: 3px;  
-            border-bottom-right-radius: 3px; 
-        }
-        
-    }
-    `
-
-const Search = styled.div`
-    background-color: #FBF9FF;
 `

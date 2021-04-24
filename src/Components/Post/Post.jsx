@@ -37,9 +37,16 @@ export default Post
 
 
 const Wrapper = styled.div`
+    margin-bottom: 2rem; 
+    box-shadow: 2px 3px 10px #e9e8e8; 
+    border-radius: 8px; 
+
+    img {
+        width: 100%;         
+    }
 
     .post-container {
-        padding: 1rem; 
+        padding: 2rem; 
         position: relative; 
 
 
@@ -55,13 +62,13 @@ const Wrapper = styled.div`
         color: #fff;
         font-family: "Quicksand", sans-serif; 
         font-weight: 600; 
-        position: absolute; 
-        bottom: 11rem;  
-        left: 3rem; 
+        margin-top: -6rem; 
      }
   }
 
   .content {
+
+    margin-top: 2rem; 
 
       a {
           font-size: 2rem; 
@@ -71,6 +78,7 @@ const Wrapper = styled.div`
           color: #1d1d1d; 
           font-weight: 600; 
           font-family: "Quicksand", sans-serif;  
+          :hover { color: var(--primary-color)}
       }
 
       p {
@@ -92,6 +100,10 @@ const Wrapper = styled.div`
             display: flex;
             align-items: center; 
             margin-left: 1.5rem; 
+          }
+
+          span {
+              margin-left: 0.6rem; 
           }
       }
   }
