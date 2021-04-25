@@ -1,6 +1,5 @@
 import React from 'react'; 
-import styled, { keyframes } from 'styled-components';
-import cake1 from "../../images/cake1.jpg"
+import styled from 'styled-components';
 import cake2 from "../../images/cake2.jpg"
 import cake3 from "../../images/cake3.jpg"
 import cake4 from "../../images/cake4.jpg"

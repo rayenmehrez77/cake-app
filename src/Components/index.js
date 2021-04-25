@@ -18,6 +18,9 @@ import AnimatedInput from "./AnimatedInput/AnimatedInput";
 import Category from "./Category/Category"; 
 import RecentPost from "./RecentPost/RecentPost"; 
 import NewPost from "./NewPost/NewPost"; 
+import Tags from "./Tags/Tags"; 
+import InstaFeed from "./InstaFeed/InstaFeed"; 
+import Newsletter from "./Newsletter/Newsletter"; 
 
 
-export { Navbar, Banner,Features, PopularCake, Story, Feature, TopLine, Product, CustomButton, Testimonials, Testimonial, Footer, Logo, TopBanner, Post, Search, AnimatedInput, Category, RecentPost, NewPost}; 
+export { Navbar, Banner,Features, PopularCake, Story, Feature, TopLine, Product, CustomButton, Testimonials, Testimonial, Footer, Logo, TopBanner, Post, Search, AnimatedInput, Category, RecentPost, NewPost, Tags, InstaFeed, Newsletter}; 

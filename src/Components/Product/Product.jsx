@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import CustomButton from "../CustomButton/CustomButton"; 
 import logo from "../../images/jelly.svg";
+import { EdamamContext } from '../../context/Context';
 
 
-const Product = () => {
+const Product = ({ recipe }) => {
     return (
         <Wrapper>
-            <img src={logo} alt="logo" />
+            <img src={recipe.image} alt="logo" />
             <div className="content">
-                <h4>Chocolate</h4> 
+                <h4>{recipe.label}</h4> 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
              </div>
              <CustomButton to="/products" shadow>$20 | Order Now </CustomButton>

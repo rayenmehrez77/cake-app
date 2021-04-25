@@ -3,9 +3,15 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaPhone } from "react-icons/fa"; 
 import {CustomButton, Logo} from '../../Components'; 
+import { useAuth0 } from '@auth0/auth0-react'; 
 
 
 const Navbar = () => {
+    const { isAuthenticated, loginWithRedirect, logout, user, isLoading } = useAuth0(); 
+
+    const isUser = isAuthenticated && user; 
+
+
     return (
         <Wrapper> 
             <div className="navbar__left">
@@ -33,8 +39,11 @@ const Navbar = () => {
                     <FaPhone /> 
                     + 216 92 183 047
                 </p>
-                <CustomButton to="/products">Order Online </CustomButton>
-                <CustomButton isSignIn to="/login">Sign In / Sign Up</CustomButton>
+                <CustomButton to="/products">Order Online </CustomButton> 
+                { isUser ? 
+                <CustomButton isSignIn onClick={() => {logout({ returnTo: window.location.origin})}}>Log Out</CustomButton>
+                    : <CustomButton isSignIn onClick={() => loginWithRedirect()}>Login In</CustomButton>
+            }
             </div>
         </Wrapper>
     )

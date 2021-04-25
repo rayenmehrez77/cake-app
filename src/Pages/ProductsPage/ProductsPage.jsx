@@ -1,26 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Product, TopLine } from '../../Components'
 import TopBanner from '../../Components/TopBanner/TopBanner'
+import { EdamamContext } from '../../context/Context'
 
-const ProductsPage = () => {
+const ProductsPage = () => { 
+    const { recipes } = useContext(EdamamContext);  
+
     return (
         <Wrapper>
             <TopBanner>Our Products </TopBanner>  
                 <TopLine margin centered subtitle="Most Popular" title="Our Exclusive Cakes" />  
             <div className="products">
-                <Product /> 
-                 <Product /> 
-                 <Product /> 
-                <Product /> 
-                 <Product /> 
-                 <Product /> 
-                <Product /> 
-                 <Product /> 
-                 <Product /> 
-                <Product /> 
-                 <Product /> 
-                 <Product /> 
+                {recipes.map((recipe) => {
+                    return <Product key={recipe.calories} recipe={recipe}/> 
+                })}
             </div>
         </Wrapper>
     )

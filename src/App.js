@@ -2,7 +2,7 @@ import { Route, Switch } from 'react-router';
 import './App.css';
 import { Footer, Navbar } from './Components';
 import GlobalStyles from './GlobalStyles';
-import { AboutPage, BlogPage, ErrorPage, HomePage, ProductsPage } from "./Pages" 
+import { AboutPage, BlogPage, ErrorPage, HomePage, LoginPage, ProductsPage } from "./Pages" 
 import ContactPage from './Pages/ContactPage/ContactPage';
 
 function App() {

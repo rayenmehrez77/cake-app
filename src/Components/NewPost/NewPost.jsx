@@ -19,6 +19,7 @@ export default NewPost
 const Wrapper = styled.div`
     display: flex; 
     margin-bottom: 1.5rem; 
+    
     img {
         margin-right: 1rem; 
     }

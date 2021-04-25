@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { TopBanner, Post, Search, Category, RecentPost} from '../../Components';
+import { TopBanner, Post, Search, Category, RecentPost, Tags, InstaFeed, Newsletter} from '../../Components';
 
 const BlogPage = () => {
     return (
@@ -15,6 +15,9 @@ const BlogPage = () => {
                      <Search />
                      <Category /> 
                      <RecentPost /> 
+                     <Tags /> 
+                     <InstaFeed /> 
+                     <Newsletter /> 
                  </div>
             </div>
         </Wrapper>
