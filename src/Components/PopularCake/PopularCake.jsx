@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import {Product, TopLine} from '../../Components'
+import { EdamamContext } from '../../context/Context'
 
-const PopularCake = () => {
+const PopularCake = () => { 
+    const { recipes }  = useContext(EdamamContext); 
+
     return (
         <Wrapper>
              <TopLine margin centered subtitle="Most Popular" title="Our Exclusive Cakes" />  
-             <div className="popular__list">
-                 <Product /> 
-                 <Product /> 
-                 <Product /> 
+             <div className="popular__list"> 
+              {recipes.filter((recipe, idx) => idx < 3).map(({ recipe }) => {
+                  return <Product key={recipe.calories} recipe={recipe} />  
+              })}
              </div>
         </Wrapper>
     )
@@ -23,13 +26,12 @@ const Wrapper = styled.div`
     margin-bottom: 4rem; 
 
     .popular__list {
-        display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
-        grid-template-rows: repeat(auto-fill, minmax(1fr, 600px)); 
-        margin: 0 8rem;
-        grid-gap: 2rem; 
-        text-align: center; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex-wrap: wrap; 
     }
 
 `
+
+{/* <Product key={recipe.calories} recipe={recipe}/>   */}

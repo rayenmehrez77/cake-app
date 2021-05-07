@@ -1,19 +1,21 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import CustomButton from "../CustomButton/CustomButton"; 
-import logo from "../../images/jelly.svg";
-import { EdamamContext } from '../../context/Context';
 
 
-const Product = ({ recipe }) => {
+const Product = ({ recipe} ) => { 
+    const { label, image, dietLabels, url} = recipe || {}; 
+
     return (
-        <Wrapper>
-            <img src={recipe.image} alt="logo" />
+        <Wrapper> 
+            <div className="img-container">
+                <img src={image} alt="logo" />
+            </div>
+            <span>{dietLabels}</span>
             <div className="content">
-                <h4>{recipe.label}</h4> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h4>{label}</h4> 
              </div>
-             <CustomButton to="/products" shadow>$20 | Order Now </CustomButton>
+             <CustomButton as="a" href={url} target="_blank" shadow>More details</CustomButton> 
         </Wrapper>
     )
 }
@@ -22,24 +24,44 @@ export default Product
 
 const Wrapper = styled.div`
     background-color: var(--secondary-color); 
-    padding: 4rem 0; 
     border-radius: 10px;
     border-bottom-right-radius: 5rem; 
+    padding-bottom: 3rem; 
+    position: relative;  
+    margin: 2rem; 
+    .content {
+        height: 3rem;
 
-    img {
-        width: 3rem; 
-    } 
+    }
 
-    p {
-        width: 18rem; 
-        text-align: center; 
-        margin-bottom: 1.5rem; 
-        font-family: "DM Sans", sans-serif; 
-        font-weight: 500; 
-    } 
+    .img-container {
+
+        img {
+            width: 100%; 
+            height: 10rem; 
+            object-fit: cover; 
+            border-radius: 8px; 
+        } 
+        
+    }
 
     h4 {
         font-family: "Quicksand", sans-serif; 
         font-weight: 700; 
+        margin: 1rem 0 1.5rem ; 
+    } 
+
+    :hover {
+        cursor: pointer;
+        box-shadow: 5px 3px 5px #dfdfdf; 
+        transform: scale(1.03); 
+
+        img {
+            overflow: hidden;
+        }
+
+        .custom-button {
+            transform: translateY(15px); 
+        }
     }
 `

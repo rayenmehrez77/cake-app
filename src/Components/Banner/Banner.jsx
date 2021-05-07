@@ -9,7 +9,7 @@ const Banner = () => {
             <div className="banner__left">
                 <h1>Delicious Cake For Everyone</h1> 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicin que, omnis iusto recusandae repudiandae</p> 
-                <CustomButton to="/explore">Explore Menu</CustomButton>
+                <CustomButton to="/products">Explore Menu</CustomButton>
             </div>
             <div className="banner__right">
                 <img src={bannerImg} alt="cake image"/> 
@@ -19,7 +19,6 @@ const Banner = () => {
 }
 
 export default Banner
-
 
 const BannerWrapper = styled.div`
     height: 80vh; 

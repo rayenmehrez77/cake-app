@@ -13,7 +13,7 @@ const Search = () => {
                         <FaSearch className="search-button"/>   
                     </div> 
                 </div>
-                <CustomButton search>Search</CustomButton>
+                <CustomButton search="true">Search</CustomButton>
             </div>
      </Wrapper>
     )

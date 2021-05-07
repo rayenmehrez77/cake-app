@@ -1,17 +1,14 @@
-import React from 'react'; 
+import React, { useContext, useState } from 'react'; 
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaPhone } from "react-icons/fa"; 
 import {CustomButton, Logo} from '../../Components'; 
-import { useAuth0 } from '@auth0/auth0-react'; 
+import { EdamamContext } from '../../context/Context'
+import { auth } from '../../firebase/firebase.utils';
 
 
-const Navbar = () => {
-    const { isAuthenticated, loginWithRedirect, logout, user, isLoading } = useAuth0(); 
-
-    const isUser = isAuthenticated && user; 
-
-
+const Navbar = () => { 
+    const { user } = useContext(EdamamContext);   
     return (
         <Wrapper> 
             <div className="navbar__left">
@@ -38,12 +35,14 @@ const Navbar = () => {
                 <p>
                     <FaPhone /> 
                     + 216 92 183 047
-                </p>
-                <CustomButton to="/products">Order Online </CustomButton> 
-                { isUser ? 
-                <CustomButton isSignIn onClick={() => {logout({ returnTo: window.location.origin})}}>Log Out</CustomButton>
-                    : <CustomButton isSignIn onClick={() => loginWithRedirect()}>Login In</CustomButton>
-            }
+                </p> 
+                <CustomButton to="/products">Order Online </CustomButton>
+                    { user ? (
+                        <div className="user">
+                            <CustomButton onClick={() => auth.signOut()}>Sign Out</CustomButton>
+                            <img src={user.photoURL} alt="photo" /> 
+                        </div> 
+                    ) : ""} 
             </div>
         </Wrapper>
     )
@@ -64,7 +63,8 @@ const Wrapper = styled.nav`
     align-items:center; 
     justify-content: space-around;
     padding: 0 2rem; 
-    background-color: #fff; 
+    background-color: #fff;  
+
 
     .navbar__left {
         display: flex; 
@@ -103,6 +103,35 @@ const Wrapper = styled.nav`
             font-weight: 600; 
             display: flex; 
             align-items: center;
+        }
+    } 
+
+    .user {
+        display: flex; 
+        align-items: center; 
+
+        img {
+            width: 45px; 
+            height: 45px; 
+            object-fit: cover; 
+            cursor: pointer;
+            border-radius: 100%; 
+
+            :hover {
+                .modal {
+                    position: absolute;
+                    top: 69px;
+                    right: 98px;
+                    width: 126px;
+                    height: 35px;
+                    text-align: center;
+                    padding: 8px;
+                    border-radius: 5px;
+                    color: #fff;
+                    background-color: #e14106;
+                    font-weight: bold;
+                }
+            }
         }
     }
 `

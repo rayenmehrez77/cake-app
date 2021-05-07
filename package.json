@@ -13,6 +13,7 @@
     "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
+    "firebase": "^8.5.0",
     "google-map-react": "^2.1.9",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
