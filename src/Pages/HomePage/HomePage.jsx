@@ -4,6 +4,7 @@ import Pictures from '../../Components/Pictures/Pictures'
 import Testimonials from '../../Components/Testimonials/Testimonials'; 
 
 const HomePage = () => { 
+  
     return (
         <main>
             <Banner />
